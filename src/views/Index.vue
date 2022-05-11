@@ -8,7 +8,6 @@
         placeholder="Basic usage"
       />
     </div>
-    <button disabled>tes</button>
     <VueButton text="Create" type="indigo" @click="tes_1()" />
   </VueContainer>
 </template>
