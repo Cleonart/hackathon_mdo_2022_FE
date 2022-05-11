@@ -1,1 +1,3 @@
-<template></template>
+<template>
+  <p>Ini Footer</p>
+</template>
