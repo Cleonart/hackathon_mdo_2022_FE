@@ -1,4 +1,4 @@
-# hackathon_mdo_2022
+# Hackathon Manado 2022
 
 ## Project setup
 ```
