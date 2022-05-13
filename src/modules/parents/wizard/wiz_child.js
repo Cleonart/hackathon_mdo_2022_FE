@@ -1,6 +1,4 @@
 import { BASE_URL } from "@/core/api.js";
-import _ from "underscore";
-
 const axios = require("axios");
 
 const MODEL_ENDPOINT = "/api/v1/model/res.users";
