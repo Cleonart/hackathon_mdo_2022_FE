@@ -13,7 +13,7 @@ const props = defineProps(["text", "type", "disabled", "custom_class"]);
 
 const button =
   "justify-center w-auto px-5 py-2 border border-transparent text-s font-medium rounded";
-const button_base = "flex items-center";
+const button_base = "flex items-center w-100";
 const button_size = {
   sm: "",
   md: "",
