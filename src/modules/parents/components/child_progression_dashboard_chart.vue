@@ -1,8 +1,6 @@
 <template>
-  <VueContainer>
-    <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
-      <CardLineChart />
-    </div>
+  <VueContainer class="mt-5">
+    <CardLineChart />
   </VueContainer>
 </template>
 
