@@ -21,7 +21,7 @@
               type="text"
               placeholder="Ex. 7171...."
               :class="input_style"
-              v-model="data.child_nik"
+              v-model="data.family_nik_no"
             />
           </div>
           <!-- NIK -->
