@@ -1,16 +1,18 @@
 <template>
   <div class="mt-8">
     <p class="text-2xl font-bold mb-1">Pendaftaran Imunisasi Anak</p>
-    <p class="mb-8">Silahkan mengecek riwayat rekam medis anak disini</p>
+    <p class="mb-8">Silahkan melakukan pendaftaran imunisasi untuk anak</p>
     <hr />
     <div class="mt-8">
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="md:col-span-1">
           <div class="px-4 sm:px-0">
             <h3 class="text-lg font-medium leading-6 text-gray-900">
-              Data Personal Anak
+              Form Pendaftaran Imunisasi Anak
             </h3>
-            <p class="mt-1 text-sm text-gray-600">Profil dan data dasar anak</p>
+            <p class="mt-1 text-sm text-gray-600">
+              Pengisian informasi data anak
+            </p>
           </div>
         </div>
         <div class="mt-5 md:mt-0 md:col-span-2">
@@ -20,16 +22,14 @@
                 <!-- NIK Anak-->
                 <div class="col-span-2">
                   <label
-                    for="first-name"
+                    for="nik-anak"
                     class="block text-sm font-medium text-gray-700"
                     >NIK Anak
                   </label>
                   <input
                     type="number"
-                    placeholder="Ex. John Doe"
-                    name="first-name"
-                    id="first-name"
-                    autocomplete="given-name"
+                    name="nik-anak"
+                    id="nik-anak"
                     :class="input_style"
                   />
                 </div>
@@ -37,15 +37,14 @@
                 <!-- Nama Juru Vaksin -->
                 <div class="col-span-4">
                   <label
-                    for="first-name"
+                    for="juru-vaksin"
                     class="block text-sm font-medium text-gray-700"
                     >Juru Vaksin
                   </label>
                   <input
                     type="text"
-                    placeholder="Ex. John Doe"
-                    name="first-name"
-                    id="first-name"
+                    name="juru-vaksin"
+                    id="juru-vaksin"
                     autocomplete="given-name"
                     :class="input_style"
                   />
@@ -54,14 +53,14 @@
                 <!-- Lokasi Vaksin -->
                 <div class="col-span-6 sm:col-span-3">
                   <label
-                    for="country"
+                    for="lokasi_vaksin"
                     class="block text-sm font-medium text-gray-700"
                     >Lokasi Vaksin</label
                   >
                   <select
-                    id="country"
-                    name="country"
-                    autocomplete="country-name"
+                    id="lokasi_vaksin"
+                    name="lokasi_vaksin"
+                    autocomplete="lokasi-vaksin"
                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   >
                     <option>Wanea</option>
@@ -81,14 +80,14 @@
                 <!-- Tipe Vaksin -->
                 <div class="col-span-6 sm:col-span-3">
                   <label
-                    for="country"
+                    for="tipe_vaksin"
                     class="block text-sm font-medium text-gray-700"
                     >Tipe Vaksin</label
                   >
                   <select
-                    id="country"
-                    name="country"
-                    autocomplete="country-name"
+                    id="tipe_vaksin"
+                    name="tipe_vaksin"
+                    autocomplete="tipe-vaksin"
                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   >
                     <option>Hepatitis 0 (HB0)</option>
@@ -107,16 +106,14 @@
                 <!-- Tanggal Vaksin -->
                 <div class="col-span-4">
                   <label
-                    for="first-name"
+                    for="tanggal-vaksin"
                     class="block text-sm font-medium text-gray-700"
                     >Tanggal Vaksinasi
                   </label>
                   <input
                     type="date"
-                    placeholder="Ex. John Doe"
-                    name="first-name"
-                    id="first-name"
-                    autocomplete="given-name"
+                    name="tanggal-vaksin"
+                    id="tanggal-vaksin"
                     :class="input_style"
                   />
                 </div>
@@ -127,7 +124,7 @@
                 type="submit"
                 class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Save
+                Simpan
               </button>
             </div>
           </div>
