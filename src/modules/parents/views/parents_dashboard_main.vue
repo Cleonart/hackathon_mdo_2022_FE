@@ -1,7 +1,16 @@
 <template>
   <div class="pb-24">
-    <parents_dashboard_jumbotron />
-    <clinic_dashboard_chart />
+    <div class="grid grid-cols-3 gap-6">
+      <parents_dashboard_jumbotron class="col-span-2" />
+      <div class="mt-5">
+        <b class="text-2xl">Notifikasi</b>
+        <hr class="my-2" />
+        <p class="px-3 bg-red-500 text-white py-2 rounded rounded-md">
+          Tidak ada notifkasi untuk sekarang
+        </p>
+      </div>
+    </div>
+    <!-- <clinic_dashboard_chart /> -->
     <clinic_dashboard_table :dataSource="test_data" :columns="columns" />
   </div>
 </template>
