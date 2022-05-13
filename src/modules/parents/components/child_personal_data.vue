@@ -22,7 +22,7 @@
             </label>
             <input
               type="text"
-              placeholder="Ex. John Doe"
+              placeholder="Ex. 7171...."
               :class="input_style"
               v-model="data.child_nik"
             />
