@@ -1,0 +1,1 @@
+<template>Clinic Dashboard Register</template>

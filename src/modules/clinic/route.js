@@ -1,5 +1,6 @@
 import ClinicDashboard from "./views/clinic_dashboard.vue";
 import ClinicDashboardMain from "./views/clinic_dashboard_main.vue";
+import ClinicDashboardRegisterImmune from "./views/clinic_dashboard_register_vaccination";
 import Module from "./module.vue";
 
 const routes = {
@@ -13,6 +14,10 @@ const routes = {
         {
           path: "",
           component: ClinicDashboardMain,
+        },
+        {
+          path: "register_vaccination",
+          component: ClinicDashboardRegisterImmune,
         },
       ],
     },
