@@ -15,6 +15,12 @@ import { ref } from "vue";
 const test_data = ref([]);
 const columns = [
   {
+    title: "Aksi",
+    slots: {
+      customRender: "action",
+    },
+  },
+  {
     title: "Nama Anak",
     dataIndex: "name",
   },
@@ -32,11 +38,11 @@ const columns = [
   },
   {
     title: "Tinggi",
-    dataIndex: "test",
+    dataIndex: "child_height",
   },
   {
     title: "Berat",
-    dataIndex: "test",
+    dataIndex: "child_weight",
   },
 ];
 

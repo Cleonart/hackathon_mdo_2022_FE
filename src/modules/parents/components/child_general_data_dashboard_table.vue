@@ -7,10 +7,14 @@
     :dataSource="props.dataSource"
     bordered
   >
+    <template #action>
+      <VueButton custom_class="w-full me-0" text="Masuk" type="primary" />
+    </template>
   </a-table>
 </template>
 
 <script setup>
 import VueContainer from "@/components/VueContainer.vue";
+import VueButton from "@/components/VueButton.vue";
 const props = defineProps(["dataSource", "columns"]);
 </script>
