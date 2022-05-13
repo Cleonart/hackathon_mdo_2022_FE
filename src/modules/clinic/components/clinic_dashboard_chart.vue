@@ -1,1 +1,0 @@
-<template>Chart</template>

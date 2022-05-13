@@ -45,14 +45,14 @@ const get_class = (selected) => {
 
 const route_list = [
   {
-    route: "/#/parents",
+    route: "/#/clinic",
     selected: true,
     name: "Beranda",
   },
   {
-    route: "/#/parents/child/1",
+    route: "/#/clinic/register_vaccination",
     selected: false,
-    name: "Anak",
+    name: "Register Vaksinasi",
   },
 ];
 </script>
