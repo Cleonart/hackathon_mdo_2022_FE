@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8">
+  <div class="mt-8 pb-12">
     <p class="text-2xl font-bold mb-1">Detail Rekam Medis Anak</p>
     <p class="mb-8">Silahkan mengecek riwayat rekam medis anak disini</p>
     <hr />
@@ -7,8 +7,8 @@
       <!-- Personal Data -->
       <div class="md:grid md:grid-cols-3 md:gap-6">
         <ChildPersonal :data="child_data" />
-        <ChildVaccinationData :data="[]" />
-        <ChildHistoryData :data="[]" />
+        <!-- <ChildVaccinationData :data="[]" /> -->
+        <ChildHistoryData :data="child_history" />
       </div>
     </div>
   </div>
@@ -24,6 +24,7 @@ import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 const child_data = ref({});
+const child_history = ref([]);
 const input_style =
   "mt-1 pl-2 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md";
 
@@ -32,6 +33,7 @@ const get_data = () => {
   WizChild.get_child_data(child_id).then((response) => {
     console.log(response);
     child_data.value = response.data.result.child_data;
+    child_history.value = response.data.result.history;
   });
 };
 
