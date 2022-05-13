@@ -1,6 +1,7 @@
 import ClinicDashboard from "./views/clinic_dashboard.vue";
 import ClinicDashboardMain from "./views/clinic_dashboard_main.vue";
-import ClinicDashboardRegisterImmune from "./views/clinic_dashboard_register_vaccination";
+import ClinicDashboardRegisterImmune from "./views/clinic_dashboard_register_vaccination.vue";
+import ClinicLogin from "../clinic/loginClinic.vue";
 import Module from "./module.vue";
 
 const routes = {
@@ -20,6 +21,10 @@ const routes = {
           component: ClinicDashboardRegisterImmune,
         },
       ],
+    },
+    {
+      path: "loginClinic",
+      component: ClinicLogin,
     },
   ],
 };
