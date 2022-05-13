@@ -18,6 +18,24 @@
 import ChildPersonal from "../components/child_personal_data.vue";
 import ChildVaccinationData from "../components/child_vaccination_data.vue";
 import ChildHistoryData from "../components/child_history_data.vue";
+import WizChild from "../wizard/wiz_child.js";
+
+import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
+const child_data = ref({});
 const input_style =
   "mt-1 pl-2 py-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md";
+
+const get_data = () => {
+  const child_id = route.params.id;
+  WizChild.get_child_data(child_id).then((response) => {
+    console.log(response);
+    child_data.value = response.data.result.records;
+  });
+};
+
+onMounted(() => {
+  get_data();
+});
 </script>

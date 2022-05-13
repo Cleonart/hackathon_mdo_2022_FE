@@ -10,31 +10,25 @@
 import parents_dashboard_jumbotron from "../components/parents_dashboard_jumbotron.vue";
 import clinic_dashboard_table from "../components/child_general_data_dashboard_table.vue";
 import clinic_dashboard_chart from "../components/child_progression_dashboard_chart.vue";
-
-const test_data = [
-  {
-    test: "gagaga",
-  },
-  {
-    test: "gegege",
-  },
-];
+import WizChild from "../wizard/wiz_child";
+import { ref } from "vue";
+const test_data = ref([]);
 const columns = [
   {
     title: "Nama Anak",
-    dataIndex: "test",
+    dataIndex: "name",
   },
   {
     title: "Umur",
-    dataIndex: "test",
+    dataIndex: "child_age_in_year",
   },
   {
     title: "NIK",
-    dataIndex: "test",
+    dataIndex: "child_nik",
   },
   {
     title: "Tanggal Lahir",
-    dataIndex: "test",
+    dataIndex: "child_date_of_birth",
   },
   {
     title: "Tinggi",
@@ -45,4 +39,13 @@ const columns = [
     dataIndex: "test",
   },
 ];
+
+const get_data = () => {
+  WizChild.search_read_by_family(11).then((response) => {
+    console.log(response);
+    test_data.value = response.data.result.records;
+  });
+};
+
+get_data();
 </script>

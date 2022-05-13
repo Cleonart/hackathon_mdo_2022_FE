@@ -29,11 +29,26 @@ export default {
       },
     });
   },
-  get_child_data(id = {}) {
-    domain = [["account_type", "=", "child"]];
+  search_read_by_family(fam_id) {
+    return HTTP.post(MODEL_ENDPOINT + "/search_read", {
+      params: {
+        domain: [
+          ["account_type", "=", "child"],
+          ["family_nik_id", "=", fam_id],
+        ],
+        args: [],
+        kwargs: {},
+      },
+    });
+  },
+  get_child_data(id) {
     return HTTP.post(MODEL_ENDPOINT + "/get_child_data", {
       params: {
-        args: [id],
+        args: [
+          {
+            id: id,
+          },
+        ],
         kwargs: {},
       },
     });
