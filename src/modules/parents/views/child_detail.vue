@@ -6,7 +6,7 @@
     <div class="mt-8">
       <!-- Personal Data -->
       <div class="md:grid md:grid-cols-3 md:gap-6">
-        <ChildPersonal :data="{}" />
+        <ChildPersonal :data="child_data" />
         <ChildVaccinationData :data="[]" />
         <ChildHistoryData :data="[]" />
       </div>
@@ -31,7 +31,7 @@ const get_data = () => {
   const child_id = route.params.id;
   WizChild.get_child_data(child_id).then((response) => {
     console.log(response);
-    child_data.value = response.data.result.records;
+    child_data.value = response.data.result.child_data;
   });
 };
 
