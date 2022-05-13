@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+
 import Clinic from "../modules/clinic";
 import Parents from "../modules/parents";
 
