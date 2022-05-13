@@ -17,7 +17,7 @@
         />
       </template>
       <template #child_age_in_yearƒ="{ record }">
-        {{ record.child_age_in_year }} Tahun
+        {{ record.child_age_in_yearƒ }} Tahun
       </template>
       <template #child_weight="{ record }">
         {{ record.child_weight }} Kg

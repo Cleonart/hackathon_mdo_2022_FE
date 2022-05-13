@@ -1,4 +1,11 @@
 <template>
+  <div class="pt-5">
+    <a-breadcrumb>
+      <a-breadcrumb-item>Orang Tua</a-breadcrumb-item>
+      <a-breadcrumb-item><a href="">Beranda</a></a-breadcrumb-item>
+    </a-breadcrumb>
+  </div>
+
   <div class="pb-24">
     <div class="grid grid-cols-3 gap-6">
       <parents_dashboard_jumbotron class="col-span-2" />
@@ -22,6 +29,7 @@ import clinic_dashboard_chart from "../components/child_progression_dashboard_ch
 import WizChild from "../wizard/wiz_child";
 import { ref } from "vue";
 const test_data = ref([]);
+const loading = ref(true);
 const columns = [
   {
     title: "Aksi",
@@ -65,8 +73,10 @@ const columns = [
 ];
 
 const get_data = () => {
+  loading.value = true;
   WizChild.search_read_by_family(11).then((response) => {
     console.log(response);
+    loading.value = false;
     test_data.value = response.data.result.records;
   });
 };
