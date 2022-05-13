@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^3.2.3",
+    "chart.js": "^3.7.1",
     "core-js": "^3.8.3",
     "underscore": "^1.13.3",
     "vue": "^3.2.13",
