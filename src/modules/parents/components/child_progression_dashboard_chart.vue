@@ -1,7 +1,5 @@
 <template>
-  <VueContainer class="mt-5">
     <CardLineChart />
-  </VueContainer>
 </template>
 
 <script setup>
