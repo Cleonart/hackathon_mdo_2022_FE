@@ -1,16 +1,40 @@
 <template>
-    <!-- Bg white -->
-    <div class=" bg-white shadow-2xl rounded-lg mx-auto text-left py-12 mt-4 pl-10">
-        <h6 class="text-xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
-            Keluarga Doe - Kruger <br>
-            NIK: 717100011
-        </h6>
-        <h5 class="text-2xl font-normal leading-normal mt-0 mb-2 text-blueGray-800">
-            Ayo Daftarkan Anakmu Untuk Imunisasi 
-        </h5>
-        <p class="text-base font-light leading-relaxed text-emerald-800">
-            Papa dan mama jangan lupa cek jadwal imunisasi anak ya <br>
+  <div
+    style="background-color: #ebfff4"
+    class="
+      bg-white
+      shadow-2xl
+      rounded-lg
+      mx-auto
+      text-left
+      py-10
+      mb-8
+      mt-4
+      pl-10
+    "
+  >
+    <div class="grid grid-cols-12">
+      <div class="col-span-8 relative">
+        <div style="position: absolute; top: 50%; transform: translateY(-50%)">
+          <!-- <h6 class="text-md font-normal leading-normal mt-0 mb-4">
+          Keluarga<br /><b class="text-xl">Fam Doe</b>
+          <br />
+          <span>NIK: 717100011</span>
+        </h6> -->
+          <div>
+            <h5 class="text-4xl font-bold mt-0 mb-3">
+              Ayo Daftarkan Anakmu<br />Untuk Imunisasi
+            </h5>
+          </div>
+          <p class="text-base font-light leading-relaxed">
+            Papa dan mama jangan lupa cek jadwal imunisasi anak ya <br />
             Imunisasi untuk melindungi anak di masa depan
-        </p>
+          </p>
+        </div>
+      </div>
+      <div class="col-span-3">
+        <img src="../../../assets/vaccine_man.png" />
+      </div>
     </div>
+  </div>
 </template>
