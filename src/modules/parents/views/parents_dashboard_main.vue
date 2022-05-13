@@ -36,6 +36,9 @@ const columns = [
   {
     title: "Umur",
     dataIndex: "child_age_in_year",
+    slots: {
+      customRender: "child_age_in_yearƒ",
+    },
   },
   {
     title: "NIK",
@@ -48,10 +51,16 @@ const columns = [
   {
     title: "Tinggi",
     dataIndex: "child_height",
+    slots: {
+      customRender: "child_height",
+    },
   },
   {
     title: "Berat",
     dataIndex: "child_weight",
+    slots: {
+      customRender: "child_weight",
+    },
   },
 ];
 

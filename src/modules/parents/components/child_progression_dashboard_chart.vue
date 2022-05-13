@@ -1,5 +1,5 @@
 <template>
-    <CardLineChart />
+  <CardLineChart />
 </template>
 
 <script setup>

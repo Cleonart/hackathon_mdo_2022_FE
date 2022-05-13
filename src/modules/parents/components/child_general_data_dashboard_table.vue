@@ -16,6 +16,15 @@
           type="primary"
         />
       </template>
+      <template #child_age_in_yearƒ="{ record }">
+        {{ record.child_age_in_year }} Tahun
+      </template>
+      <template #child_weight="{ record }">
+        {{ record.child_weight }} Kg
+      </template>
+      <template #child_height="{ record }">
+        {{ record.child_height }} Cm
+      </template>
     </a-table>
   </div>
 </template>

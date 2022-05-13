@@ -3,7 +3,7 @@
     style="background-color: #ebfff4"
     class="
       bg-white
-      shadow-2xl
+      shadow-md
       rounded-lg
       mx-auto
       text-left
