@@ -1,15 +1,13 @@
 <template>
-  <VueContainer>
-    <h3 class="text-2xl">Daftar Anak</h3>
-    <p>Lihatlah data umum anak-anak anda di sini</p>
-    <a-table
-      class="mt-5"
-      :columns="props.columns"
-      :dataSource="props.dataSource"
-      bordered
-    >
-    </a-table>
-  </VueContainer>
+  <h3 class="text-2xl">Daftar Anak</h3>
+  <p>Lihatlah data umum anak-anak anda di sini</p>
+  <a-table
+    class="mt-5"
+    :columns="props.columns"
+    :dataSource="props.dataSource"
+    bordered
+  >
+  </a-table>
 </template>
 
 <script setup>
