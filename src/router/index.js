@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import ParentHomeView from "../views/IndexParents.vue";
-import ParentLoginView from "../views/Login.vue";
+import ParentLoginView from "../views/LoginParents.vue";
 import Index from "../views/Index.vue";
 
 const routes = [
