@@ -7,9 +7,11 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@popperjs/core": "^2.11.5",
     "ant-design-vue": "^3.2.3",
-    "chart.js": "^3.7.1",
     "axios": "^0.27.2",
+    "chart.js": "^3.7.1",
     "core-js": "^3.8.3",
     "underscore": "^1.13.3",
     "vue": "^3.2.13",
