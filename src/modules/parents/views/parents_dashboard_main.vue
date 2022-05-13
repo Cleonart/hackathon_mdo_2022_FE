@@ -1,7 +1,9 @@
 <template>
-  <parents_dashboard_jumbotron />
-  <clinic_dashboard_chart />
-  <clinic_dashboard_table :dataSource="test_data" :columns="columns" />
+  <div class="pb-24">
+    <parents_dashboard_jumbotron />
+    <clinic_dashboard_chart />
+    <clinic_dashboard_table :dataSource="test_data" :columns="columns" />
+  </div>
 </template>
 
 <script setup>
