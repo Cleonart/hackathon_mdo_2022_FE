@@ -1,3 +1,3 @@
 <template>
-    <h1>Clinic Dashboard</h1>
+  <router-view />
 </template>
