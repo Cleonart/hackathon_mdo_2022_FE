@@ -1,5 +1,11 @@
 <template>
   <div class="mt-8">
+    <div class="pt-5">
+      <a-breadcrumb>
+        <a-breadcrumb-item>Klinik</a-breadcrumb-item>
+        <a-breadcrumb-item><a href="">Registrasi Vaksin</a></a-breadcrumb-item>
+      </a-breadcrumb>
+    </div>
     <p class="text-2xl font-bold mb-1">Pendaftaran Imunisasi Anak</p>
     <p class="mb-8">Silahkan melakukan pendaftaran imunisasi untuk anak</p>
 
