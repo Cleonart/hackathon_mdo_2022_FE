@@ -10,8 +10,8 @@ export let CHILDS = [
     child_age_in_month: 15,
     child_age_in_year: 1,
     child_age_phonetic: 15,
-    child_height: 150,
-    child_weight: 52,
+    child_height: 82,
+    child_weight: 8,
     last_vaccinated_date: false,
   },
   {
