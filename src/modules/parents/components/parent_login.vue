@@ -8,7 +8,7 @@
       <div class="w-full mt-2">
         <a-input placeholder="Kata Sandi"></a-input>
       </div>
-      <VueButton custom_class="w-full mt-3" text="Masuk" type="primary" />
+      <VueButton @click="auth()" custom_class="w-full mt-3" text="Masuk" type="primary" />
     </div>
   </div>
 </template>
@@ -16,4 +16,11 @@
 <script setup>
 import VueContainer from "@/components/VueContainer.vue";
 import VueButton from "@/components/VueButton.vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const auth = () => {
+  router.replace("/parents");
+};
 </script>

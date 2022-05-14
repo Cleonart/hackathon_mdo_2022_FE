@@ -28,7 +28,7 @@ const routes = {
       ],
     },
     {
-      path: "loginClinic",
+      path: "login",
       component: ClinicLogin,
     },
   ],
