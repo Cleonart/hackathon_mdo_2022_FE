@@ -1,4 +1,14 @@
 <template>
+  <div class="pt-5">
+    <a-breadcrumb>
+      <a-breadcrumb-item>Klinik</a-breadcrumb-item>
+      <a-breadcrumb-item
+        ><router-link to="/clinic/vaccination_history"
+          >Riwayat Vaksinasi</router-link
+        ></a-breadcrumb-item
+      >
+    </a-breadcrumb>
+  </div>
   <ClinicDashboardCards :data="CHILDS" />
   <h2 class="font-bold text-2xl mb-1 mt-10">Riwayat Data Vaksinasi</h2>
   <p>Silahkan melihat daftar anak penerima imunisasi aktif disini</p>

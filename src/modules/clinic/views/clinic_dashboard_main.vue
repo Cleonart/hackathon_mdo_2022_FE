@@ -1,4 +1,10 @@
 <template>
+<div class="pt-5">
+    <a-breadcrumb>
+      <a-breadcrumb-item>Klinik</a-breadcrumb-item>
+      <a-breadcrumb-item><a href="">Beranda</a></a-breadcrumb-item>
+    </a-breadcrumb>
+  </div>
   <ClinicDashboardCards :data="CHILDS" />
   <h2 class="font-bold text-2xl mb-1 mt-10">
     Daftar Anak Penerima Imunisasi Aktif
