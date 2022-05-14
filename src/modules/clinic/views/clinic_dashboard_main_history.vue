@@ -10,14 +10,25 @@
     </a-breadcrumb>
   </div>
   <ClinicDashboardCards :data="CHILDS" />
-  <h2 class="font-bold text-2xl mb-1 mt-10">Riwayat Data Vaksinasi</h2>
-  <p>Silahkan melihat daftar anak penerima imunisasi aktif disini</p>
+  <div class="relative">
+    <h2 class="font-bold text-2xl mb-1 mt-10">Riwayat Data Vaksinasi</h2>
+    <p>Silahkan melihat daftar anak penerima imunisasi aktif disini</p>
+    <VueButton
+      @click="toggle = !toggle"
+      :text="toggle ? 'Tampilkan Data' : 'Sembunyikan Data'"
+      type="primary"
+      class="censor_state_button"
+    ></VueButton>
+  </div>
   <a-table class="mt-5" :columns="table_columns" :dataSource="HISTORY" bordered>
     <template #action>
       <VueButton custom_class="w-full me-0" text="Detail" type="primary" />
     </template>
+    <template #NIK="{ record }">
+      {{ censor(record.child_nik, toggle) }}
+    </template>
     <template #child_id="{ record }">
-      {{ record.child_id[1] }}
+      {{ censor(record.child_id[1], toggle) }}
     </template>
     <template #state="{ record }">
       <span :class="REF_CLASS[record.state]">{{ REF_DATA[record.state] }}</span>
@@ -38,6 +49,7 @@ import { CHILDS } from "../../../seeder/list_of_childs.js";
 import { HISTORY } from "../../../seeder/list_of_history.js";
 import VueButton from "../../../components/VueButton.vue";
 
+const toggle = ref(false);
 const REF_DATA = ref({
   right_on_time: "TEPAT WAKTU",
   pass_due_date: "TERLAMBAT",
@@ -61,6 +73,7 @@ const table_columns = [
   {
     title: "NIK",
     dataIndex: "child_nik",
+    slots: { customRender: "NIK" },
   },
   {
     title: "Nama Anak",
@@ -95,4 +108,26 @@ const table_columns = [
     slots: { customRender: "state" },
   },
 ];
+const censor = (text, toggle) => {
+  if (toggle == false) {
+    const length = parseInt(text.length / 2);
+    let new_text = text.split("");
+    new_text[length] = "*";
+    new_text[length - 2] = "*";
+    new_text[length - 1] = "*";
+    new_text[length + 1] = "*";
+    new_text[length + 2] = "*";
+    return new_text.join("");
+  }
+  return text;
+};
 </script>
+
+<style>
+.censor_state_button {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 99;
+}
+</style>
