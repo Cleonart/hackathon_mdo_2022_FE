@@ -11,11 +11,18 @@
       Daftar Anak Penerima Imunisasi Aktif
     </h2>
     <p>Silahkan melihat daftar anak penerima imunisasi aktif disini</p>
-    <VueButton text="Sembunyikan Data" type="primary"></VueButton>
+    <VueButton
+      @click="toggle = !toggle"
+      :text="toggle ? 'Tampilkan Data' : 'Sembunyikan Data'"
+      type="primary"
+      class="censor_state_button"
+    ></VueButton>
   </div>
   <a-table class="mt-5" :columns="table_columns" :dataSource="CHILDS" bordered>
-    <template #child_nik="{ record }"> {{ censor(record.child_nik) }}</template>
-    <template #name="{ record }"> {{ censor(record.name) }}</template>
+    <template #child_nik="{ record }">
+      {{ censor(record.child_nik, toggle) }}</template
+    >
+    <template #name="{ record }"> {{ censor(record.name, toggle) }}</template>
     <template #child_age_in_month="{ record }">
       {{ record.child_age_in_month }} Bulan</template
     >
@@ -67,14 +74,26 @@ const table_columns = [
   },
 ];
 
-const censor = (text) => {
-  const length = parseInt(text.length / 2);
-  let new_text = text.split("");
-  new_text[length] = "*";
-  new_text[length - 2] = "*";
-  new_text[length - 1] = "*";
-  new_text[length + 1] = "*";
-  new_text[length + 2] = "*";
-  return new_text.join("");
+const censor = (text, toggle) => {
+  if (toggle == false) {
+    const length = parseInt(text.length / 2);
+    let new_text = text.split("");
+    new_text[length] = "*";
+    new_text[length - 2] = "*";
+    new_text[length - 1] = "*";
+    new_text[length + 1] = "*";
+    new_text[length + 2] = "*";
+    return new_text.join("");
+  }
+  return text;
 };
 </script>
+
+<style scoped>
+.censor_state_button {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 99;
+}
+</style>
