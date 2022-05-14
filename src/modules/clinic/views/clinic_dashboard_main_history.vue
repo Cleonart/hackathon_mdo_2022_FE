@@ -2,11 +2,11 @@
   <div class="pt-5">
     <a-breadcrumb>
       <a-breadcrumb-item>Klinik</a-breadcrumb-item>
-      <a-breadcrumb-item
-        ><router-link to="/clinic/vaccination_history"
-          >Riwayat Vaksinasi</router-link
-        ></a-breadcrumb-item
-      >
+      <a-breadcrumb-item>
+        <router-link to="/clinic/vaccination_history">
+          Riwayat Vaksinasi
+        </router-link>
+      </a-breadcrumb-item>
     </a-breadcrumb>
   </div>
   <ClinicDashboardCards :data="CHILDS" />
@@ -68,8 +68,12 @@ const table_columns = [
     slots: { customRender: "child_id" },
   },
   {
-    title: "Tanggal Lahir",
-    dataIndex: "child_date_of_birth",
+    title: "Tanggal Perkiraan",
+    dataIndex: "expected_date",
+  },
+  {
+    title: "Tanggal Imunisasi",
+    dataIndex: "register_date",
   },
   {
     title: "Umur (Bulan)",
