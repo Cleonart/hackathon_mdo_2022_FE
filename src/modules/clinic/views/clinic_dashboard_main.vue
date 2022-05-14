@@ -7,6 +7,15 @@
   <a-table class="mt-5" :columns="table_columns" :dataSource="CHILDS" bordered>
     <template #child_nik="{ record }"> {{ censor(record.child_nik) }}</template>
     <template #name="{ record }"> {{ censor(record.name) }}</template>
+    <template #child_age_in_month="{ record }">
+      {{ record.child_age_in_month }} Bulan</template
+    >
+    <template #child_height="{ record }">
+      {{ record.child_height }} Cm
+    </template>
+    <template #child_weight="{ record }">
+      {{ record.child_weight }} Kg
+    </template>
   </a-table>
 </template>
 
@@ -34,14 +43,17 @@ const table_columns = [
   {
     title: "Umur (Bulan)",
     dataIndex: "child_age_in_month",
+    slots: { customRender: "child_age_in_month" },
   },
   {
     title: "Tinggi",
     dataIndex: "child_height",
+    slots: { customRender: "child_height" },
   },
   {
     title: "Berat",
     dataIndex: "child_weight",
+    slots: { customRender: "child_weight" },
   },
 ];
 
