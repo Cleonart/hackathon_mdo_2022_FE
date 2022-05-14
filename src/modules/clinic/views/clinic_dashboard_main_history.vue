@@ -76,8 +76,8 @@ const table_columns = [
     dataIndex: "register_date",
   },
   {
-    title: "Umur (Bulan)",
-    dataIndex: "child_age_in_month",
+    title: "Daftar VAksin",
+    dataIndex: "vaccine_list_ids",
   },
   {
     title: "Tinggi",
