@@ -2,7 +2,10 @@
   <div class="pt-5">
     <a-breadcrumb>
       <a-breadcrumb-item>Orang Tua</a-breadcrumb-item>
-      <a-breadcrumb-item><a href="">Beranda</a></a-breadcrumb-item>
+      <a-breadcrumb-item><a href="/#/parents">Beranda</a></a-breadcrumb-item>
+      <a-breadcrumb-item>
+        <a href="/#/parents">Keluarga Fam - Doe</a>
+      </a-breadcrumb-item>
     </a-breadcrumb>
   </div>
 
@@ -12,9 +15,17 @@
       <div class="mt-5">
         <b class="text-2xl">Notifikasi</b>
         <hr class="my-2" />
-        <p class="px-3 bg-red-500 text-white py-2 rounded rounded-md">
-          Tidak ada notifkasi untuk sekarang
-        </p>
+        <div
+          class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4"
+          role="alert"
+        >
+          <p class="font-bold mb-0">Jangan Lupa Imunisasi</p>
+          <p class="mt-1 mb-1">
+            Jangan lupa untuk membawa Vira Maode untuk imunisasi pada tanggal
+            15-03-2022 ya
+            <VueButton text="Daftarkan" type="danger" class="mt-3"></VueButton>
+          </p>
+        </div>
       </div>
     </div>
     <!-- <clinic_dashboard_chart /> -->
@@ -28,6 +39,7 @@ import clinic_dashboard_table from "../components/child_general_data_dashboard_t
 import clinic_dashboard_chart from "../components/child_progression_dashboard_chart.vue";
 import WizChild from "../wizard/wiz_child";
 import { ref } from "vue";
+import VueButton from "@/components/VueButton.vue";
 const test_data = ref([]);
 const loading = ref(true);
 const columns = [

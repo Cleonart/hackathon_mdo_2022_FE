@@ -10,17 +10,20 @@
       >
     </a-breadcrumb>
   </div>
-  <div class="mt-8 pb-12">
+  <div class="mt-8 pb-12 relative">
     <p class="text-2xl font-bold mb-1">Detail Rekam Medis Anak</p>
     <p class="mb-8">Silahkan mengecek riwayat rekam medis anak disini</p>
+    <VueButton
+      text="Muat Ulang"
+      style="position: absolute; top: 17px; right: 0"
+      type="primary"
+      @click="location.reload()"
+    ></VueButton>
     <hr />
     <div class="mt-8">
-      <!-- Personal Data -->
-      <div class="md:grid md:grid-cols-3 md:gap-6">
-        <ChildPersonal :data="child_data" />
-        <!-- <ChildVaccinationData :data="[]" /> -->
-        <ChildHistoryData :data="child_history" />
-      </div>
+      <ChildPersonal :data="child_data" />
+      <hr class="my-5" />
+      <ChildHistoryData :data="child_history" />
     </div>
   </div>
 </template>
@@ -30,6 +33,7 @@ import ChildPersonal from "../components/child_personal_data.vue";
 import ChildVaccinationData from "../components/child_vaccination_data.vue";
 import ChildHistoryData from "../components/child_history_data.vue";
 import WizChild from "../wizard/wiz_child.js";
+import VueButton from "@/components/VueButton.vue";
 
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
