@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <!-- <clinic_dashboard_chart /> -->
+    <clinic_dashboard_chart />
     <clinic_dashboard_table :dataSource="test_data" :columns="columns" />
   </div>
 </template>
