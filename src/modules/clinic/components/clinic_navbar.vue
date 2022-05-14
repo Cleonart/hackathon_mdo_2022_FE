@@ -50,9 +50,14 @@ const route_list = [
     name: "Beranda",
   },
   {
+    route: "/#/clinic/vaccination_history",
+    selected: false,
+    name: "Riwayat Vaksinasi",
+  },
+  {
     route: "/#/clinic/register_vaccination",
     selected: false,
-    name: "Register Vaksinasi",
+    name: "Daftar Vaksinasi",
   },
 ];
 </script>
